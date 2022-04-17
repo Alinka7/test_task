@@ -1,5 +1,4 @@
 -- creating a data base
-
  CREATE DATABASE sgm
      WITH 
      OWNER = postgres
@@ -10,7 +9,6 @@
      CONNECTION LIMIT = -1;
 
 -- creatind the first table: seller_info
-
      create table seller_info (seller_id integer not NULL, 
                     fruit_id  integer not null,
                     fruit_weight integer,
@@ -31,13 +29,10 @@
           insert into seller_info (seller_id, fruit_id, fruit_weight) values (5, 12, 20);
           insert into seller_info (seller_id, fruit_id, fruit_weight) values (5, 13, 15);
           insert into seller_info (seller_id, fruit_id, fruit_weight) values (5, 14, 30);
-      
--- displaying the result from the first table
 
   select * from seller_info;
 
 -- creating the second table: consumption_info
-
      create table consumption_info (
                    client_id integer not null,
                    seller_id integer not null,
@@ -55,7 +50,6 @@
            insert into consumption_info (client_id, seller_id, fruit_id, quantity_purchased_fruit) values (8, 4, 9, 3);
            insert into consumption_info (client_id, seller_id, fruit_id, quantity_purchased_fruit) values (9, 4, 8, 4);     
 
--- displaying the result from the second table
 
  select * from consumption_info;
 
