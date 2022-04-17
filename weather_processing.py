@@ -110,13 +110,11 @@ average_windspeed_January = pd.DataFrame(data[data['month'] == 1].mean(), column
 average_windspeed_January
 
 # TODO Downsample the record to a yearly frequency for each location
-
 data['year'] = pd.DatetimeIndex(data['date']).year
 yearly_frequency = pd.DataFrame(data.resample('1y').mean()).drop(columns=['month', 'year'])
 yearly_frequency
 
 # TODO Downsample the record to a monthly frequency for each location
-
 monthly_frequency = pd.DataFrame(data.resample('1m').mean()).drop(columns=['month', 'year'])
 monthly_frequency
 
